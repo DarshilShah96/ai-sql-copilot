@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 saved_queries.json
 saved_queries.json
+sample.db
+saved_queries.json
