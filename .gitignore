@@ -1,3 +1,5 @@
 .env
 __pycache__/
 *.pyc
+saved_queries.json
+saved_queries.json

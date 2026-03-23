@@ -11,10 +11,10 @@ AI SQL Copilot converts business questions into SQL queries using an LLM.
 - Query history
 
 ## Tech Stack
-- Python
-- Streamlit
-- OpenAI API
-- Pandas
+- openai
+- python-dotenv
+- streamlit
+- pandas
 
 ## Run Locally
 
