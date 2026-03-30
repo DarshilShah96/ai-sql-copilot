@@ -1,141 +1,46 @@
 # 🤖 AI SQL Copilot
 
-Convert business questions into SQL using AI.  
-Built for analysts who want faster data access without writing complex queries manually.
+AI SQL Copilot converts business questions into SQL using an LLM, validates the SQL against a live database schema, lets you edit it manually, and can execute it directly on a database.
 
----
+## What it does
 
-## 🚀 Live Features
+This project is built for analytics workflows where users want to go from:
 
-- 🔤 Natural language → SQL generation  
-- 📁 CSV upload + automatic schema inference  
-- 🗄️ SQLite database schema auto-detection  
-- 📊 Table preview in sidebar  
-- ✏️ Manual SQL editor (edit before execution)  
-- ✅ SQL safety checks (only SELECT allowed)  
-- 🔍 Schema validation before execution  
-- ▶️ Run SQL directly on database  
-- 🧠 AI-powered SQL fixing (auto-correct errors)  
-- 💾 Save & load queries (local JSON storage)  
+**business question → SQL → validation → execution → result**
 
----
+instead of manually writing queries every time.
 
-## 🧠 Problem It Solves
+## Features
 
-Most BI tools:
-- require SQL knowledge  
-- slow down non-technical users  
-- separate question → query → insight  
+- Natural language to SQL
+- CSV upload with schema inference
+- SQLite database schema auto-detection
+- Sidebar table preview with row counts
+- Manual SQL editor
+- SQL safety check for execution
+- Validation against real SQLite tables and columns
+- AI-assisted SQL fixing using schema + error context
+- Save and load queries locally
+- Download generated SQL
+- Download query results as CSV
 
-This tool reduces friction:
-
-
-Business Question → SQL → Result → Insight
-
-
----
-
-## 🏗️ Tech Stack
+## Tech Stack
 
 - Python
-- Streamlit (UI)
-- OpenAI API (LLM)
-- Pandas (data handling)
-- SQLAlchemy (DB execution)
-- SQLite (demo DB)
+- Streamlit
+- OpenAI API
+- Pandas
+- SQLAlchemy
+- SQLite
 
----
+## Project Structure
 
-## 📂 Project Structure
-
-
+```text
 sql_copilot/
-│
 ├── app.py
-├── requirements.txt
 ├── create_sample_db.py
-├── sample.db (ignored)
-├── saved_queries.json (ignored)
-
-
----
-
-## ⚙️ Setup (Local)
-
-### 1. Clone repo
-
-```bash
-git clone https://github.com/DarshilShah96/ai-sql-copilot
-cd ai-sql-copilot
-2. Install dependencies
-pip3 install -r requirements.txt
-3. Add API key
-
-Create .env:
-
-OPENAI_API_KEY=your_api_key_here
-4. Run app
-python3 -m streamlit run app.py
-🧪 Demo Workflow
-
-Enter DB path → sample.db
-
-Click Auto-detect schema
-
-Ask:
-
-Top customers by revenue
-
-Click Generate SQL
-
-Edit in Manual SQL Editor
-
-Run query
-
-Save query
-
-Reload from sidebar
-
-📸 Screenshots
-
-Add:
-
-SQL generation
-
-query results
-
-manual editor + saved queries
-
-🔮 Future Improvements
-
-PostgreSQL / MySQL support
-
-multi-table relationship detection
-
-query performance optimization
-
-user authentication
-
-cloud DB connection
-
-query history analytics
-
-🧑‍💻 Author
-
-Darshil Shah
-
-💡 Positioning
-
-This project demonstrates:
-
-AI + Analytics integration
-
-LLM-based workflow automation
-
-real-world BI use case
-
-full-stack thinking (UI + backend + AI)
-
-⭐ If you found this useful
-
-Give it a star on GitHub.
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── sample.db              # local demo DB, ignored in git if needed
+└── saved_queries.json     # local saved queries, ignored in git
